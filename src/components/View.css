@@ -1,0 +1,17 @@
+.view__page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.invoice_bill{
+    border: solid 1px #aeaeae;
+    padding: 50px 50px 200px 50px;
+    margin: 50px; 
+}
+
+.invoice__detail{
+    display: flex;
+    gap: 300px;
+}
