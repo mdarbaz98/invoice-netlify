@@ -5,6 +5,7 @@ import View from "./components/View";
 import Add from "./components/Add";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 

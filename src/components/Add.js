@@ -5,6 +5,8 @@ import axios from "axios";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 function Add() {
   const navigate = useNavigate();
@@ -60,7 +62,7 @@ function Add() {
     try {
       const response = await axios.post(URL, invoiceData);
       if (response) {
-        alert("successfully Added");
+        toast("Successfully Added!");
         setTimeout(() => {
           navigate("/");
         }, 500);
@@ -80,6 +82,7 @@ function Add() {
     <div className="add__page d-flex justify-content-center align-content-center">
       <div className="Add_page_content">
         <h1 className="text-center">Add Invoice</h1>
+        <ToastContainer />
         <div className="add_formContainer p-4">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
