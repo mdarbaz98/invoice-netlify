@@ -15,3 +15,9 @@
     display: flex;
     gap: 300px;
 }
+
+@media screen and (max-width: 767px) {
+    .invoice__detail{
+        gap: 0px;
+    }
+}
