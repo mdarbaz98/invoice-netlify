@@ -14,6 +14,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { Link } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
+import { ToastContainer, toast } from "react-toastify";
 
 function Home() {
   const [invoices, setInvoices] = useState(null);
@@ -33,7 +34,7 @@ function Home() {
     try {
       const response = await axios.delete(`${URL}/${id}`);
       if (response) {
-        alert("successfully Deleted");
+        toast("successfully Deleted");
         getInvoices();
       }
     } catch (error) {
@@ -52,7 +53,7 @@ function Home() {
         <Button
           className="my-4"
           variant="contained"
-          color="success"
+          color="primary"
           startIcon={<AddIcon />}
         >
           Add Invoice
@@ -86,7 +87,7 @@ function Home() {
                     <Link to={`invoice/view/${row._id}`}>
                       <Button
                         variant="contained"
-                        color="success"
+                        color="warning"
                         startIcon={<RemoveRedEyeIcon />}
                       >
                         View

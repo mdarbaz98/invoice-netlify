@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./Add.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
@@ -65,11 +65,11 @@ function Add() {
         toast("Successfully Added!");
         setTimeout(() => {
           navigate("/");
-        }, 500);
+        }, 300);
       }
     } catch (error) {
       console.log(error);
-      alert("somthing went wrong");
+      toast("something went wrong");
     }
   };
 
@@ -82,7 +82,6 @@ function Add() {
     <div className="add__page d-flex justify-content-center align-content-center">
       <div className="Add_page_content">
         <h1 className="text-center">Add Invoice</h1>
-        <ToastContainer />
         <div className="add_formContainer p-4">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">

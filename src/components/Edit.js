@@ -6,6 +6,8 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import './Edit.css'
+import { ToastContainer, toast } from "react-toastify";
+
 
 function Edit() {
 
@@ -73,14 +75,14 @@ function Edit() {
     try {
       const response = await axios.put(URL, invoice);
       if(response) {
-        alert('successfully updated')
+        toast('successfully updated')
         setTimeout(() => {
           navigate('/')
-        },500)
+        },300)
       }
     } catch (error) {
       console.log(error);
-      alert('somthing went wrong')
+      toast('something went wrong')
     }
   };
 
