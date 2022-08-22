@@ -85,9 +85,9 @@ function Edit() {
   };
 
   return (
-    <div className="edit__page">
+    <div className="edit__page mx-auto pt-5">
       <h1 className="text-center">Edit Invoice</h1>
-      <div className="edit_formContainer">
+      <div className="edit_formContainer p-4">
         <form>
           <div class="mb-3">
             <label for="username" class="form-label">
@@ -103,8 +103,8 @@ function Edit() {
             />
           </div>
           {invoice?.items?.map((item,index) => (
-            <div className="inner_items d-flex gap-3">
-              <div class="mb-3">
+            <div className="inner_items row gap-3">
+              <div class="mb-3 col-12  col-lg">
                 <label for="productName" class="form-label">
                   Product Name
                 </label>
@@ -117,7 +117,7 @@ function Edit() {
                   onChange={(e) => {onInputChange('items', e.target.value,index,'name')}}
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 col-12  col-lg">
                 <label for="productQuantity" class="form-label">
                   Product Quantity
                 </label>
@@ -130,7 +130,7 @@ function Edit() {
                   onChange={(e) => {onInputChange('items', e.target.value,index,'quantity')}}
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 col-12  col-lg">
                 <label for="productPrice" class="form-label">
                   Product Price
                 </label>
@@ -147,7 +147,7 @@ function Edit() {
                 variant="contained"
                 color="error"
                 startIcon={<DeleteIcon />}
-                className="mt-auto mb-3"
+                className="mt-auto mb-3 ms-3 ms-lg-0 col-4  col-lg-2"
               >
                 Delete
               </Button>

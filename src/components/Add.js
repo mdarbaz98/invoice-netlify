@@ -80,7 +80,7 @@ function Add() {
     <div className="add__page d-flex justify-content-center align-content-center">
       <div className="Add_page_content">
         <h1 className="text-center">Add Invoice</h1>
-        <div className="add_formContainer">
+        <div className="add_formContainer p-4">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="username" className="form-label">
@@ -97,8 +97,8 @@ function Add() {
               />
             </div>
             {invoiceData?.items?.map((item, index) => (
-              <div key={index} className="inner_items d-flex gap-3">
-                <div className="mb-3">
+              <div key={index} className="inner_items row  gap-3">
+                <div className="mb-3 col-12  col-lg">
                   <label htmlFor="productName" className="form-label">
                     Product Name
                   </label>
@@ -115,7 +115,7 @@ function Add() {
                     }
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 col-12  col-lg">
                   <label htmlFor="productQuantity" className="form-label">
                     Product Quantity
                   </label>
@@ -132,7 +132,7 @@ function Add() {
                     }
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 col-12  col-lg">
                   <label htmlFor="productPrice" className="form-label">
                     Product Price
                   </label>
@@ -153,7 +153,7 @@ function Add() {
                   variant="contained"
                   color="error"
                   startIcon={<DeleteIcon />}
-                  className="mt-auto mb-3"
+                  className="mt-auto mb-3 ms-3 ms-lg-0 col-4 col-lg-2"
                   onClick={(e) => {
                     deleteItem(index);
                   }}

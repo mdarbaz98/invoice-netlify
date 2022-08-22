@@ -46,7 +46,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="home__page px-5">
+    <div className="home__page px-lg-5 p-3">
       <h1 className="text-center my-3">Invoice System</h1>
       <Link to="/invoice">
         <Button
